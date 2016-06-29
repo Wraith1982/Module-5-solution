@@ -328,7 +328,7 @@ transform: rotate(275deg) scale(1.5) skew(-49deg) translate(1px);
 /* MENU CATEGORIES PAGE */
 .category-tile { 
   position: relative;
-  border: 2px solid #3F0C1F;
+  border: 2px solid red;
   overflow: hidden;
   width: 200px;
   height: 200px;
@@ -342,12 +342,13 @@ transform: rotate(275deg) scale(1.5) skew(-49deg) translate(1px);
   text-align: center;
   font-size: 1.2em;
   text-transform: uppercase;
-  background-color: #000;
-  color: #fff;
-  opacity: .8;
+   background-color: orange;
+  font-weight: bold;
+  color: green;
+  opacity: 0.66;
 }
 .category-tile:hover {
-  box-shadow: 0 1px 5px 1px #cccccc;
+  box-shadow: 0 1px 5px 1px red;
 }
 
 #menu-categories-title + div {
