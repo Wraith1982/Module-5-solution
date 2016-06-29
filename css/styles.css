@@ -3,6 +3,10 @@ body {
   color: #fff;
   background-color: green;
   font-family: 'Oxygen', sans-serif;
+
+
+ /*Gradient tło tylko dla Mozilla Firefox */
+  background:-moz-linear-gradient(53% 67% 116deg, green, yellow 50%)
 }
 
 /** HEADER **/
@@ -10,14 +14,147 @@ body {
   background-color: orange;
   border-radius: 40px; /* zaokrąglenia */
   border: 20px;
+
+  /*Animacja headera*/
+
+-webkit-animation: cssAnimation 5s 3 ease;
+-moz-animation: cssAnimation 5s 3 ease;
+-o-animation: cssAnimation 5s 3 ease;
+}
+@-webkit-keyframes cssAnimation {
+from { -webkit-transform: rotate(4deg) scale(1) skew(1deg) translate(10px); }
+to { -webkit-transform: rotate(355deg) scale(1.001) skew(0deg) translate(200px); }
+}
+@-moz-keyframes cssAnimation {
+from { -moz-transform: rotate(4deg) scale(1) skew(1deg) translate(10px); }
+to { -moz-transform: rotate(355deg) scale(1.001) skew(0deg) translate(200px); }
+}
+@-o-keyframes cssAnimation {
+from { -o-transform: rotate(4deg) scale(1) skew(1deg) translate(10px); }
+to { -o-transform: rotate(355deg) scale(1.001) skew(0deg) translate(200px); }
+
+/*Animacja kostki*/
+
 }
 
-#logo-img {
+      #perspektywa {
+        width:100px;
+        height:100px;
+        margin:0 auto;
+        perspective:300px;
+        -webkit-perspective:300px;
+      }
+
+      #rodzic {
+        width:100%;
+        height:100%;
+        position:relative;
+        transform-style:preserve-3d;
+        -webkit-transform-style:preserve-3d;
+        animation:obrot 4s linear infinite;
+        -webkit-animation:obrot 4s linear infinite;
+      }
+
+      #rodzic > div {
+        width:100%;
+        height:100%;
+        position:absolute;
+        background-image:radial-gradient(ellipse at center,rgba(0,255,0,0.8),rgba(0,0,0,0.8));
+        box-shadow:0 0 4px red;
+      }
+
+      #przod {
+        transform:translateZ(50px);
+        -webkit-transform:translateZ(50px);
+      }
+
+      #tyl {
+        transform:translateZ(-50px);
+        -webkit-transform:translateZ(-50px);
+      }
+
+      #lewo {
+        transform:rotateY(-90deg) translateZ(50px);
+        -webkit-transform:rotateY(-90deg) translateZ(50px);
+      }
+
+      #prawo {
+        transform:rotateY(90deg) translateZ(50px);
+        -webkit-transform:rotateY(90deg) translateZ(50px);
+      }
+
+      #gora {
+        transform:rotateX(-90deg) translateZ(50px);
+        -webkit-transform:rotateX(-90deg) translateZ(50px);
+      }
+
+      #dol {
+        transform:rotateX(90deg) translateZ(50px);
+        -webkit-transform:rotateX(90deg) translateZ(50px);
+      }
+
+      #rodzic > div > div {
+        position:absolute;
+        width:20px;
+        height:20px;
+        background-color:orange;
+        border-radius:25%;
+        box-shadow:0 0 4px 2px red, 0 0 3px 1px green inset;
+      }
+
+      #przod > div:nth-child(1) { left:40px; top:40px; }
+
+      #tyl > div:nth-child(1) { left:10px; top:10px; }
+      #tyl > div:nth-child(2) { left:70px; bottom:10px; }
+
+      #lewo > div:nth-child(1) { left:10px; top:10px; }
+      #lewo > div:nth-child(2) { left:70px; top:10px; }
+      #lewo > div:nth-child(3) { left:10px; top:40px; }
+      #lewo > div:nth-child(4) { left:70px; top:40px; }
+      #lewo > div:nth-child(5) { left:70px; bottom:10px; }
+      #lewo > div:nth-child(6) { left:10px; bottom:10px; }
+      #lewo > div:nth-child(7) { left:40px; top:60px;  }
+      #lewo > div:nth-child(8) { left:40px; top:20px; }
+
+      #prawo > div:nth-child(1) { left:10px; top:10px; }
+      #prawo > div:nth-child(2) { left:70px; top:10px; }
+      #prawo > div:nth-child(3) { left:70px; bottom:10px; }
+      #prawo > div:nth-child(4) { left:10px; bottom:10px; }
+
+      #gora > div:nth-child(1) { left:10px; top:10px; }
+      #gora > div:nth-child(2) { left:70px; top:10px; }
+      #gora > div:nth-child(3) { left:70px; bottom:10px; }
+      #gora > div:nth-child(4) { left:10px; bottom:10px; }
+      #gora > div:nth-child(5) { left:40px; top:40px; }
+
+      #dol > div:nth-child(1) { left:10px; top:10px; }
+      #dol > div:nth-child(2) { left:70px; top:10px; }
+      #dol > div:nth-child(3) { left:10px; top:40px; }
+      #dol > div:nth-child(4) { left:70px; top:40px; }
+      #dol > div:nth-child(5) { left:70px; bottom:10px; }
+      #dol > div:nth-child(6) { left:10px; bottom:10px; }
+
+
+      @keyframes obrot
+      {
+        0% { transform:rotateX(0) rotateZ(0); }
+        100% { transform:rotateX(360deg) rotateZ(360deg); }
+      }
+
+      @-webkit-keyframes obrot
+      {
+        0% { -webkit-transform:rotateX(0) rotateZ(0); }
+        100% { -webkit-transform:rotateX(360deg) rotateZ(360deg); }
+      }
+
+      /*Koniec animacji kostki*/
+
+/*#logo-img {
   background: url('../images/restaurant-logo_large.png') no-repeat;
   width: 150px;
   height: 150px;
   margin: 10px 15px 10px 0;
-}
+}*/
 
 .navbar-brand {
   padding-top: 25px;
@@ -50,7 +187,7 @@ body {
   margin-top: 10px;
 }
 #nav-list a {
-  color: #951C49;
+  color: green;
   text-align: center;
 }
 #nav-list a:hover {
@@ -79,6 +216,27 @@ body {
 .navbar-header button.navbar-toggle {
   clear: both;
   margin-top: -30px;
+} 
+
+/*Animacja przycisków menu*/
+
+#navMenuButton {
+transition:All 1s ease-in;
+-webkit-transition:All 1s ease-in;
+-moz-transition:All 1s ease-in;
+-o-transition:All 1s ease-in;
+transform: rotate(4deg) scale(1) skew(1deg) translate(10px);
+-webkit-transform: rotate(4deg) scale(1) skew(1deg) translate(10px);
+-moz-transform: rotate(4deg) scale(1) skew(1deg) translate(10px);
+-o-transform: rotate(4deg) scale(1) skew(1deg) translate(10px);
+-ms-transform: rotate(4deg) scale(1) skew(1deg) translate(10px);
+}
+#navMenuButton :hover{
+transform: rotate(275deg) scale(1.5) skew(-49deg) translate(1px);
+-webkit-transform: rotate(275deg) scale(1.5) skew(-49deg) translate(1px);
+-moz-transform: rotate(275deg) scale(1.5) skew(-49deg) translate(1px);
+-o-transform: rotate(275deg) scale(1.5) skew(-49deg) translate(1px);
+-ms-transform: rotate(275deg) scale(1.5) skew(-49deg) translate(1px);
 }
 
 /* END HEADER */
@@ -129,6 +287,8 @@ body {
 .container .jumbotron {
   box-shadow: 0 0 50px red;
   border: 2px solid black; /*kolory też można wpisywać hasztagiem np #3F0C1F;*/
+
+
 }
 
 #menu-tile, #specials-tile, #map-tile {
@@ -340,6 +500,8 @@ h3.menu-item-title {
   .container .jumbotron {
     margin-top: 30px;
     padding: 0;
+
+
   }
   #menu-tile, #specials-tile {
     width: 360px;
