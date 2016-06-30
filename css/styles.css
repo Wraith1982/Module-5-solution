@@ -374,7 +374,7 @@ transform: rotate(275deg) scale(1.5) skew(-49deg) translate(1px);
 }
 .menu-item-photo {
   position: relative;
-  border: 2px solid #3F0C1F; 
+  border: 2px solid red; 
   overflow: hidden;
   padding: 0;
   margin-right: -15px;
@@ -384,10 +384,10 @@ transform: rotate(275deg) scale(1.5) skew(-49deg) translate(1px);
 }
 .menu-item-photo div {
   position: absolute;
-  bottom: 0;
-  right: 0;
+  top: 0;
+  left: 0;
   width: 80px;
-  background-color: #557c3e;
+  background-color: orange;
   text-align: center;
 }
 .menu-item-description {
