@@ -371,6 +371,7 @@ transform: rotate(275deg) scale(1.5) skew(-49deg) translate(1px);
 }
 .menu-item-tile .menu-item-price span {
   font-size: .6em;
+  color: green;
 }
 .menu-item-photo {
   position: relative;
@@ -389,6 +390,7 @@ transform: rotate(275deg) scale(1.5) skew(-49deg) translate(1px);
   width: 80px;
   background-color: orange;
   text-align: center;
+  opacity: 0.66;
 }
 .menu-item-description {
   padding-right: 30px;
