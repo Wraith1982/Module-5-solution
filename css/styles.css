@@ -310,7 +310,21 @@ transform: rotate(275deg) scale(1.5) skew(-49deg) translate(1px);
   background: url('../images/specials.jpg') no-repeat;
   background-position: center;
 }
-#menu-tile span, #specials-tile span, #map-tile span {
+#menu-tile span, #specials-tile span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 1.6em;
+  text-transform: uppercase;
+  background-color: orange;
+  font-weight: bold;
+  color: green;
+  opacity: 0.66;
+}
+
+#map-tile span {
   position: absolute;
   bottom: 0;
   right: 0;
