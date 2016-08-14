@@ -1,171 +1,34 @@
 body {
   font-size: 16px;
   color: #fff;
-  background-color: green;
+  background-color: #61122f;
   font-family: 'Oxygen', sans-serif;
-
-
- /*Gradient tło tylko dla Mozilla Firefox */
-  background:-moz-linear-gradient(53% 67% 116deg, green, yellow 50%)
 }
 
 /** HEADER **/
 #header-nav {
-  background-color: orange;
-  border-radius: 40px; /* zaokrąglenia */
-  border: 20px;
-
-  /*Animacja headera*/
-
--webkit-animation: cssAnimation 5s 3 ease;
--moz-animation: cssAnimation 5s 3 ease;
--o-animation: cssAnimation 5s 3 ease;
-}
-@-webkit-keyframes cssAnimation {
-from { -webkit-transform: rotate(4deg) scale(1) skew(1deg) translate(10px); }
-to { -webkit-transform: rotate(355deg) scale(1.001) skew(0deg) translate(200px); }
-}
-@-moz-keyframes cssAnimation {
-from { -moz-transform: rotate(4deg) scale(1) skew(1deg) translate(10px); }
-to { -moz-transform: rotate(355deg) scale(1.001) skew(0deg) translate(200px); }
-}
-@-o-keyframes cssAnimation {
-from { -o-transform: rotate(4deg) scale(1) skew(1deg) translate(10px); }
-to { -o-transform: rotate(355deg) scale(1.001) skew(0deg) translate(200px); }
-
-/*Animacja kostki*/
-
+  background-color: #f6b319;
+  border-radius: 0;
+  border: 0;
 }
 
-      #perspektywa {
-        width:100px;
-        height:100px;
-        margin:0 auto;
-        perspective:300px;
-        -webkit-perspective:300px;
-      }
-
-      #rodzic {
-        width:100%;
-        height:100%;
-        position:relative;
-        transform-style:preserve-3d;
-        -webkit-transform-style:preserve-3d;
-        animation:obrot 4s linear infinite;
-        -webkit-animation:obrot 4s linear infinite;
-      }
-
-      #rodzic > div {
-        width:100%;
-        height:100%;
-        position:absolute;
-        background-image:radial-gradient(ellipse at center,rgba(0,255,0,0.8),rgba(0,0,0,0.8));
-        box-shadow:0 0 4px red;
-      }
-
-      #przod {
-        transform:translateZ(50px);
-        -webkit-transform:translateZ(50px);
-      }
-
-      #tyl {
-        transform:translateZ(-50px);
-        -webkit-transform:translateZ(-50px);
-      }
-
-      #lewo {
-        transform:rotateY(-90deg) translateZ(50px);
-        -webkit-transform:rotateY(-90deg) translateZ(50px);
-      }
-
-      #prawo {
-        transform:rotateY(90deg) translateZ(50px);
-        -webkit-transform:rotateY(90deg) translateZ(50px);
-      }
-
-      #gora {
-        transform:rotateX(-90deg) translateZ(50px);
-        -webkit-transform:rotateX(-90deg) translateZ(50px);
-      }
-
-      #dol {
-        transform:rotateX(90deg) translateZ(50px);
-        -webkit-transform:rotateX(90deg) translateZ(50px);
-      }
-
-      #rodzic > div > div {
-        position:absolute;
-        width:20px;
-        height:20px;
-        background-color:orange;
-        border-radius:25%;
-        box-shadow:0 0 4px 2px red, 0 0 3px 1px green inset;
-      }
-
-      #przod > div:nth-child(1) { left:40px; top:40px; }
-
-      #tyl > div:nth-child(1) { left:10px; top:10px; }
-      #tyl > div:nth-child(2) { left:70px; bottom:10px; }
-
-      #lewo > div:nth-child(1) { left:10px; top:10px; }
-      #lewo > div:nth-child(2) { left:70px; top:10px; }
-      #lewo > div:nth-child(3) { left:10px; top:40px; }
-      #lewo > div:nth-child(4) { left:70px; top:40px; }
-      #lewo > div:nth-child(5) { left:70px; bottom:10px; }
-      #lewo > div:nth-child(6) { left:10px; bottom:10px; }
-      #lewo > div:nth-child(7) { left:40px; top:60px;  }
-      #lewo > div:nth-child(8) { left:40px; top:20px; }
-
-      #prawo > div:nth-child(1) { left:10px; top:10px; }
-      #prawo > div:nth-child(2) { left:70px; top:10px; }
-      #prawo > div:nth-child(3) { left:70px; bottom:10px; }
-      #prawo > div:nth-child(4) { left:10px; bottom:10px; }
-
-      #gora > div:nth-child(1) { left:10px; top:10px; }
-      #gora > div:nth-child(2) { left:70px; top:10px; }
-      #gora > div:nth-child(3) { left:70px; bottom:10px; }
-      #gora > div:nth-child(4) { left:10px; bottom:10px; }
-      #gora > div:nth-child(5) { left:40px; top:40px; }
-
-      #dol > div:nth-child(1) { left:10px; top:10px; }
-      #dol > div:nth-child(2) { left:70px; top:10px; }
-      #dol > div:nth-child(3) { left:10px; top:40px; }
-      #dol > div:nth-child(4) { left:70px; top:40px; }
-      #dol > div:nth-child(5) { left:70px; bottom:10px; }
-      #dol > div:nth-child(6) { left:10px; bottom:10px; }
-
-
-      @keyframes obrot
-      {
-        0% { transform:rotateX(0) rotateZ(0); }
-        100% { transform:rotateX(360deg) rotateZ(360deg); }
-      }
-
-      @-webkit-keyframes obrot
-      {
-        0% { -webkit-transform:rotateX(0) rotateZ(0); }
-        100% { -webkit-transform:rotateX(360deg) rotateZ(360deg); }
-      }
-
-      /*Koniec animacji kostki*/
-
-/*#logo-img {
+#logo-img {
   background: url('../images/restaurant-logo_large.png') no-repeat;
   width: 150px;
   height: 150px;
   margin: 10px 15px 10px 0;
-}*/
+}
 
 .navbar-brand {
   padding-top: 25px;
 }
-.navbar-brand h1 { /* Nazwa restauracji  - Food, LLC */
-  /* font-family: 'Lora', serif;  - czcionka dla nagłówka wymaga odnośnika np. https://fonts.googleapis.com */
-  color: green;
+.navbar-brand h1 { /* Restaurant name */
+  font-family: 'Lora', serif;
+  color: #557c3e;
   font-size: 1.5em;
   text-transform: uppercase;
   font-weight: bold;
-  text-shadow: 1px 1px 1px violet; /*- cień dla czcionki dla nagłówka */
+  text-shadow: 1px 1px 1px #222;
   margin-top: 0;
   margin-bottom: 0;
   line-height: .75;
@@ -187,11 +50,11 @@ to { -o-transform: rotate(355deg) scale(1.001) skew(0deg) translate(200px); }
   margin-top: 10px;
 }
 #nav-list a {
-  color: green;
+  color: #951C49;
   text-align: center;
 }
 #nav-list a:hover {
-  background: olive;
+  background: #E7E7E7;
 }
 #nav-list a span {
   font-size: 1.8em;
@@ -216,32 +79,8 @@ to { -o-transform: rotate(355deg) scale(1.001) skew(0deg) translate(200px); }
 .navbar-header button.navbar-toggle {
   clear: both;
   margin-top: -30px;
-} 
-
-/*Animacja przycisków menu*/
-
-#navMenuButton {
-transition:All 1s ease-in;
--webkit-transition:All 1s ease-in;
--moz-transition:All 1s ease-in;
--o-transition:All 1s ease-in;
-transform: rotate(4deg) scale(1) skew(1deg) translate(10px);
--webkit-transform: rotate(4deg) scale(1) skew(1deg) translate(10px);
--moz-transform: rotate(4deg) scale(1) skew(1deg) translate(10px);
--o-transform: rotate(4deg) scale(1) skew(1deg) translate(10px);
--ms-transform: rotate(4deg) scale(1) skew(1deg) translate(10px);
 }
-#navMenuButton :hover{
-transform: rotate(275deg) scale(1.5) skew(-49deg) translate(1px);
--webkit-transform: rotate(275deg) scale(1.5) skew(-49deg) translate(1px);
--moz-transform: rotate(275deg) scale(1.5) skew(-49deg) translate(1px);
--o-transform: rotate(275deg) scale(1.5) skew(-49deg) translate(1px);
--ms-transform: rotate(275deg) scale(1.5) skew(-49deg) translate(1px);
-}
-
 /* END HEADER */
-
-
 
 /* FOOTER */
 .panel-footer {
@@ -273,22 +112,12 @@ transform: rotate(275deg) scale(1.5) skew(-49deg) translate(1px);
 }
 /* END FOOTER */
 
-#about, #awards {
-  font-style: italic;
-  color: darkgreen;
-  font-size: 1.5em;
-  text-transform: uppercase;
-  font-weight: bold;
-  text-shadow: 1px 1px 1px violet; 
 
-}
 
 /* HOME PAGE */
 .container .jumbotron {
-  box-shadow: 0 0 50px red;
-  border: 2px solid black; /*kolory też można wpisywać hasztagiem np #3F0C1F;*/
-
-
+  box-shadow: 0 0 50px #3F0C1F;
+  border: 2px solid #3F0C1F;
 }
 
 #menu-tile, #specials-tile, #map-tile {
@@ -296,35 +125,21 @@ transform: rotate(275deg) scale(1.5) skew(-49deg) translate(1px);
   width: 100%;
   margin-bottom: 15px;
   position: relative;
-  border: 2px solid red;
+  border: 2px solid #3F0C1F;
   overflow: hidden;
 }
 #menu-tile:hover, #specials-tile:hover, #map-tile:hover {
-  box-shadow: 0 1px 5px 1px red;
+  box-shadow: 0 1px 5px 1px #cccccc;
 }
 #menu-tile {
-  background: url('../images/menu.jpg') no-repeat;
+  background: url('../images/menu-tile.jpg') no-repeat;
   background-position: center;
 }
 #specials-tile {
-  background: url('../images/specials.jpg') no-repeat;
+  background: url('../images/specials-tile.jpg') no-repeat;
   background-position: center;
 }
-#menu-tile span, #specials-tile span {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  text-align: center;
-  font-size: 1.6em;
-  text-transform: uppercase;
-  background-color: orange;
-  font-weight: bold;
-  color: green;
-  opacity: 0.66;
-}
-
-#map-tile span {
+#menu-tile span, #specials-tile span, #map-tile span {
   position: absolute;
   bottom: 0;
   right: 0;
@@ -332,17 +147,16 @@ transform: rotate(275deg) scale(1.5) skew(-49deg) translate(1px);
   text-align: center;
   font-size: 1.6em;
   text-transform: uppercase;
-  background-color: orange;
-  font-weight: bold;
-  color: green;
-  opacity: 0.66;
+  background-color: #000;
+  color: #fff;
+  opacity: .8;
 }
 /* END HOME PAGE */
 
 /* MENU CATEGORIES PAGE */
 .category-tile { 
   position: relative;
-  border: 2px solid red;
+  border: 2px solid #3F0C1F;
   overflow: hidden;
   width: 200px;
   height: 200px;
@@ -350,19 +164,18 @@ transform: rotate(275deg) scale(1.5) skew(-49deg) translate(1px);
 }
 .category-tile span {
   position: absolute;
-  top: 0;
-  left: 0;
+  bottom: 0;
+  right: 0;
   width: 100%;
   text-align: center;
   font-size: 1.2em;
   text-transform: uppercase;
-   background-color: orange;
-  font-weight: bold;
-  color: green;
-  opacity: 0.66;
+  background-color: #000;
+  color: #fff;
+  opacity: .8;
 }
 .category-tile:hover {
-  box-shadow: 0 1px 5px 1px red;
+  box-shadow: 0 1px 5px 1px #cccccc;
 }
 
 #menu-categories-title + div {
@@ -385,11 +198,10 @@ transform: rotate(275deg) scale(1.5) skew(-49deg) translate(1px);
 }
 .menu-item-tile .menu-item-price span {
   font-size: .6em;
-  color: green;
 }
 .menu-item-photo {
   position: relative;
-  border: 2px solid red; 
+  border: 2px solid #3F0C1F; 
   overflow: hidden;
   padding: 0;
   margin-right: -15px;
@@ -399,12 +211,11 @@ transform: rotate(275deg) scale(1.5) skew(-49deg) translate(1px);
 }
 .menu-item-photo div {
   position: absolute;
-  top: 0;
-  left: 0;
+  bottom: 0;
+  right: 0;
   width: 80px;
-  background-color: orange;
+  background-color: #557c3e;
   text-align: center;
-  opacity: 0.66;
 }
 .menu-item-description {
   padding-right: 30px;
@@ -422,7 +233,7 @@ h3.menu-item-title {
 /********** Large devices only **********/
 @media (min-width: 1200px) {
   .container .jumbotron {
-    background: url('../images/jumbotron_1200.gif') no-repeat;
+    background: url('../images/jumbotron_1200.jpg') no-repeat;
     height: 675px;
   }
 }
@@ -517,8 +328,6 @@ h3.menu-item-title {
   .container .jumbotron {
     margin-top: 30px;
     padding: 0;
-
-
   }
   #menu-tile, #specials-tile {
     width: 360px;
